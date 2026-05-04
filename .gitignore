@@ -1,0 +1,49 @@
+# OpenClaw runtime repo ignore rules
+# Keep secrets, auth, local devices, databases, logs, and generated runtime state out of git.
+
+# Secrets / credentials / local identity
+openclaw.json
+openclaw.json.*
+credentials/
+service-env/
+devices/
+identity/
+exec-approvals.json
+
+# Agent/session history and runtime databases/state
+agents/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+flows/
+tasks/
+memory/*.sqlite*
+update-check.json
+plugins/
+npm/
+tmp/
+
+# Logs / transient/generated output
+logs/
+*.log
+*.err.log
+canvas/
+completions/
+
+# Agent workspace is its own git repo at workspace/.git
+workspace/
+
+# OS/editor noise
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# Keep this ignore file tracked
+!.gitignore
+
+# Optional safe static artifacts; uncomment if you want to version generated shell completions.
+# !completions/
+# !completions/**
