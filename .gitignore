@@ -30,8 +30,11 @@ logs/
 canvas/
 completions/
 
-# Agent workspace is its own git repo at workspace/.git
-workspace/
+# Workspace local/runtime internals, while keeping workspace source files tracked
+workspace/.git/
+workspace/.openclaw/
+workspace/memory/.dreams/
+workspace/**/.DS_Store
 
 # OS/editor noise
 .DS_Store
